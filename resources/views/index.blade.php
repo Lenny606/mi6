@@ -13,7 +13,7 @@
 
 <body>
     <div class="left-panel">
-        <img class="left-panel__img" src="images/mi6-seal-bg.png" alt="MI6 Seal" />
+        <img class="left-panel__img" src="images/mi6-seal.png" alt="MI6 Seal" />
         <nav>
             <a class="button" href="#">Home</a>
             <a class="button" href="#">People of Interest</a>
