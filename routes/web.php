@@ -18,6 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/', ['App\Http\Controllers\HomeController', 'index']);
-Route::get('people-of-interest', function(){
-    return view('people-of-interest.index');
-});
+Route::get('/people-of-interest', ['App\Http\Controllers\PersonController', 'index']);
