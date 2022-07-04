@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const mix = require('laravel-mix');
 
- 
+
 
 /*
 
@@ -24,7 +24,7 @@ const mix = require('laravel-mix');
 
  */
 
- 
+
 
 if (!mix.inProduction()) {
 
@@ -38,11 +38,11 @@ if (!mix.inProduction()) {
 
     })
 
-    .sourceMaps()
+        .sourceMaps()
 
 }
 
- 
+
 
 mix
 
@@ -54,7 +54,7 @@ mix
 
     })
 
- 
+
 
     // open and serve with browsersync
 
@@ -72,13 +72,13 @@ mix
 
     })
 
- 
+
 
     // add versioning
     .version();
 // ADD ASSETS TO COMPILE HERE:
 
- 
+
 // Examples:
 mix.sass('resources/css/style.scss', 'public/css');
 mix.js('resources/js/people-of-interest.js', 'public/js').react();

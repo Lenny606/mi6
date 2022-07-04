@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/components', function(){
+    return view('nav');
+    });
 
 Route::get('/', ['App\Http\Controllers\HomeController', 'index']);
 Route::get('/people-of-interest', ['App\Http\Controllers\PersonController', 'index']);
+
