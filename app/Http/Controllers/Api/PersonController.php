@@ -11,7 +11,7 @@ class PersonController extends Controller
 {
     public function index()
     {
-        $people = Person::get();
+        $people = Person::with('aliases')->get();
         return $people;
     }
 }

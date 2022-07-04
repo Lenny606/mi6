@@ -1,11 +1,10 @@
-import { divide } from "lodash";
 import { useState, useEffect } from "react";
 
 const App = () => {
 
     const [data, setData] = useState([]);
 
-    const fetchData = async() => {
+    const fetchData = async () => {
 
         const response = await fetch('/api/people-of-interest')
         const parsedResponse = await response.json();
@@ -18,15 +17,24 @@ const App = () => {
     }, [])
 
     return (
-        data == null ? 
-         <h1>Loading</h1>
-         :
-         <div className="">
-         {data.map((person) => {
-            return  <p>{person.name} : {person.occupation}</p>
-         })}
-         
-         </div>
+        data == null ?
+            <h1>Loading</h1>
+            :
+            <div className="">
+                {data.map((person) => {
+                    return <>
+                        <p>{person.name} - {person.occupation}</p>
+
+                        <p>Known aliases:</p>
+                        <ul>
+                            {person.aliases.map((alias) => {
+                                <li>{alias.alias}</li>
+                            })}
+                        </ul>
+                    </>
+                })}
+
+            </div>
     )
 }
 export default App;
