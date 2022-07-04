@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    @yield ( 'nav' )
+    <x-nav></x-nav>
 
     @yield ('content')
 </body>
