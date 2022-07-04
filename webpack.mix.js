@@ -81,5 +81,6 @@ mix
  
 // Examples:
 mix.sass('resources/css/style.scss', 'public/css');
+mix.js('resources/js/people-of-interest.js', 'public/js').react();
 // mix.js('resources/js/library.js', 'public/js');
 // mix.js('resources/js/app.js', 'public/js').react();
