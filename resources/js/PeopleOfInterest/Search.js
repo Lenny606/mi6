@@ -16,7 +16,7 @@ const Search = () => {
         fetchData()
     }, [])
 
-
+   
     const input = document.querySelector('.search-input');
     input.addEventListener('onkeyup', (e)=>{
         console.log(e.target.value);

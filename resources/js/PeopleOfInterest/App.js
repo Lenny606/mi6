@@ -14,9 +14,15 @@ const App = () => {
     };
 
     useEffect(() => {
-        fetchData();
-    }, []);
-    console.log("im here");
+        fetchData()
+    }, [])
+    
+    const input = document.querySelector('.search-input');
+    input.addEventListener('onkeyup', (e)=>{
+        console.log(e.target.value);
+    });
+   
+   
     return (
         <div className="">
             <StatusFilter
