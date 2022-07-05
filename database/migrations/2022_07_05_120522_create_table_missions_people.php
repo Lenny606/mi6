@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMissionPerson extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class CreateMissionPerson extends Migration
     {
         Schema::create('mission_person', function (Blueprint $table) {
      
-    $table->foreignId('mission_id');
+            $table->foreignId('mission_id');
             $table->foreignId('person_id');
           
         });
