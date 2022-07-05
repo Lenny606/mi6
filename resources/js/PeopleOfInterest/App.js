@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import StatusFilter from "./StatusFilter";
 
 const App = () => {
 
     const [data, setData] = useState([]);
+    const [selectedStatus, setSelectedStatus] = useState('');
 
     const fetchData = async () => {
 
@@ -31,6 +33,7 @@ const App = () => {
                                 <li>{alias.alias}</li>
                             })}
                         </ul>
+                        <StatusFilter selectedStatus={selectedStatus} setSelectedStatus={setSelectedStatus} />
                     </>
                 })}
 
