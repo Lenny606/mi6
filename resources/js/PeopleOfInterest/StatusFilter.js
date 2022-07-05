@@ -2,17 +2,18 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+
 const StatusFilter = ({ selectedStatus, setSelectedStatus }) => {
     const [statuses, setStatuses] = useState([]);
 
     const loadStatuses = async () => {
 
-        
-            const parsedResponse = await axios.get('/api/statuses');
-            // const response = await fetch('/api/statuses')
-            // const parsedResponse = await response.json();
 
-       
+        const parsedResponse = await axios.get('/api/statuses');
+        // const response = await fetch('/api/statuses')
+        // const parsedResponse = await response.json();
+
+
 
         setStatuses(parsedResponse.data);
     };

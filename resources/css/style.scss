@@ -78,10 +78,18 @@ a:hover {
     margin: 2rem;
 }
 
+// .status-filter {
+//     display: flex;
+//     width: 100%;
+//     justify-content: space-around;
+//     background-color: #999999;
+//     height: 2rem;
+// }
+
 .status-filter__status {
     background-color:#2B5554;
     font-family: 'Cutive Mono', monospace;
-    color: white; 
+    color: black; 
 }
 
 .status-filter__status:hover {
