@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\Person;
+use App\Models\Mission;
 
 class PersonController extends Controller
 {
@@ -16,9 +17,10 @@ class PersonController extends Controller
         if (!empty($status)) {
             $people = Person::with('aliases')
                 ->where('status_id', '=', $status)
+                ->with('missions')
                 ->get();
         } else {
-            $people = Person::with('aliases')->get();
+            $people = Person::with('aliases')->with('missions')->get();
         }
 
         return $people;
