@@ -9,9 +9,24 @@ use App\Models\Person;
 
 class PersonController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $people = Person::with('aliases')->get();
+        $status = $request->status;
+
+        if (!empty($status)) {
+            $people = Person::with('aliases')
+                ->where('status_id', '=', $status)
+                ->get();
+        } else {
+            $people = Person::with('aliases')->get();
+        }
+
         return $people;
     }
 }
+
+
+
+// As the query is being formulated, add an if condition. It would say that if the value of $status is not empty, another ->where call will be called on the query being built.
+
+// In the where it will ask that the value of status_id is equal to the value of the $status variable.
