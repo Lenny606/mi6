@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="main-panel">
-    <p>Welcome To MI6</p>
+    <p class="main-panel__heading">Welcome To MI6</p>
 </div>
 @endsection

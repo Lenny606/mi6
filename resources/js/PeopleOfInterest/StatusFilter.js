@@ -17,7 +17,6 @@ const StatusFilter = ({ selectedStatus, setSelectedStatus }) => {
 
     return (
         <div className="status-filter">
-            This is the status filter
             {statuses.map((status, i) => {
                 return (
                     <button
@@ -27,7 +26,7 @@ const StatusFilter = ({ selectedStatus, setSelectedStatus }) => {
                     >
                         {status.name}
                     </button>
-                );
+                )
             })}
         </div>
     );

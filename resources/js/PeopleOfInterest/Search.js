@@ -11,18 +11,18 @@ const Search = () => {
 
         setData(parsedResponse);
     }
-    
+
     useEffect(() => {
         fetchData()
     }, [])
 
 
     const input = document.querySelector('.search-input');
-    input.addEventListener('onkeyup', (e)=>{
+    input.addEventListener('keyup', (e) => {
         console.log(e.target.value);
     })
 
-  
+
 
 }
 

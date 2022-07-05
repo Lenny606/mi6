@@ -21,7 +21,7 @@ const PeopleList = ({ selectedStatus }) => {
     return data == null ? (
         <h1>Loading...</h1>
     ) : (
-        <div className="">
+        <div className="people-list">
             {data.map((person, i) => {
                 return (
                     <div key={i}>
@@ -34,11 +34,12 @@ const PeopleList = ({ selectedStatus }) => {
                         <ul>
                             {person.aliases.map((alias) => {
                                 <li>{alias.alias}</li>
-                            })};
+                            })}
+                            <br />
                         </ul>
                     </div>
                 );
-            })}
+            })};
         </div >
     );
 };
