@@ -13,8 +13,8 @@ class SearchNameController extends Controller
 
         $search = $request->input('name');
         
-
-        $people = Person::where('name', $search)->get();
+        //searches in names 
+        $people = Person::where('name', 'LIKE', '%' .$search."%")->get();
         return $people;
     }
 }
