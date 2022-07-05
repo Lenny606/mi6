@@ -15,7 +15,7 @@ const App = () => {
     useEffect(() => {
         fetchData()
     }, [])
-
+    console.log('im here')
     return (
         data == null ?
             <h1>Loading</h1>
