@@ -18,9 +18,10 @@ const StatusFilter = ({ selectedStatus, setSelectedStatus }) => {
     return (
         <div className="status-filter">
             This is the status filter
-            {statuses.map((status) => {
+            {statuses.map((status, i) => {
                 return (
                     <button
+                        key={i}
                         onClick={setSelectedStatus(status.id)}
                         className={"status-filter__status"}
                     >
