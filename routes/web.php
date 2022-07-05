@@ -21,5 +21,7 @@ Route::get('/components', function(){
     });
 
 Route::get('/', ['App\Http\Controllers\HomeController', 'index']);
-Route::get('/people-of-interest', ['App\Http\Controllers\PersonController', 'index']);
+Route::get('/people-of-interest', ['App\Http\Controllers\PersonController', 'index'])
+    ->name('people-index');
+Route::post('/people-of-interest/edit', ['App\Http\Controllers\PersonController', 'edit']);
 

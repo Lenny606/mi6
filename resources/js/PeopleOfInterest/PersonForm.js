@@ -1,23 +1,30 @@
 import { useState } from 'react';
+import axios from 'axios';
+import { values } from 'lodash';
 
-const PersonForm = ({ name }) => {
+const PersonForm = ({ id, name }) => {
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState({ 'id': id, 'name': name })
 
-    const handleClick = (event) => {
+    const handleChange = (event) => {
         event.preventDefault();
-        console.log(event.target.value)
+        console.log(event)
         setData(data => {
             return ({
                 ...data,
-                [event.target.name]: event.target.name
+                [event.target.name]: event.target.value
             });
         });
     }
 
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        axios.post('/people-of-interest/edit', data)
+    }
+
     return (
-        <form action='' method='post' onSubmit={handleClick}>
-            <input type="text" name="name" defaultValue={name} />
+        <form action='' method='post' onSubmit={handleSubmit}>
+            <input type="text" name="name" value={data.name} onChange={handleChange} />
             <input type="submit" />
         </form>
     )

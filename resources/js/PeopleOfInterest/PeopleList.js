@@ -30,7 +30,7 @@ const PeopleList = ({ selectedStatus }) => {
                         <p>
                             <em>{person.occupation}</em>
                         </p>
-                        <PersonForm name={person.name} />
+                        <PersonForm id={person.id} name={person.name} />
                         <p>Known aliases:</p>
                         <ul>
                             {person.aliases.map((alias) => {

@@ -13,4 +13,20 @@ class PersonController extends Controller
 
         return view('people-of-interest.index', compact('people'));
     }
+
+    public function edit(Request $request)
+    {
+        $person = Person::findOrFail($request->input('id'));
+        $person->name = $request->input('name');
+        $person->save();
+
+        return (
+            redirect(route('people-index'))
+        );
+        
+        // return [
+        //     'id' => $request->input('id'),
+        //     'name' => $request->input('name'),
+        // ];
+    }
 }
