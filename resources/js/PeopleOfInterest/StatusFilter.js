@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 
-const StatusFilter = ({ selectedStatus, setSelectedStatus}) => {
+const StatusFilter = ({ selectedStatus, setSelectedStatus }) => {
 
     const [statuses, setStatuses] = useState([])
 
@@ -12,7 +12,7 @@ const StatusFilter = ({ selectedStatus, setSelectedStatus}) => {
 
         setStatuses(parsedResponse);
     }
-    
+
     useEffect(() => {
         loadStatuses()
     }, [])
@@ -21,9 +21,9 @@ const StatusFilter = ({ selectedStatus, setSelectedStatus}) => {
         <div className='status-filter'>
             This is the status filter
             {statuses.map((status) => {
-                <div onClick={setStatuses(status.id)} className={ 'status-filter__status' }>
-                { status.name }
-            </div>
+                <div onClick={setStatuses(status.id)} className={'status-filter__status'}>
+                    {status.name}
+                </div>
             })}
         </div>
     )
