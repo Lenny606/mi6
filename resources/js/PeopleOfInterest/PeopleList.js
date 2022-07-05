@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import axios from "axios";
+import PersonForm from "./PersonForm";
 
 const PeopleList = ({ selectedStatus }) => {
     const [data, setData] = useState([]);
@@ -29,7 +30,7 @@ const PeopleList = ({ selectedStatus }) => {
                         <p>
                             <em>{person.occupation}</em>
                         </p>
-
+                        <PersonForm name={person.name} />
                         <p>Known aliases:</p>
                         <ul>
                             {person.aliases.map((alias) => {
