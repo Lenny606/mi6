@@ -25,7 +25,7 @@ const App = () => {
             <div className="">
                 {data.map((person) => {
                     return <>
-                        <p>{person.name} - {person.occupation}</p>
+                        <p><strong>{person.name}</strong> - {person.occupation}</p>
 
                         <p>Known aliases:</p>
                         <ul>
