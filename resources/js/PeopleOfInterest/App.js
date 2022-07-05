@@ -33,10 +33,10 @@ const App = () => {
                                 <li>{alias.alias}</li>
                             })}
                         </ul>
-                        <StatusFilter selectedStatus={selectedStatus} setSelectedStatus={setSelectedStatus} />
+                   
                     </>
                 })}
-
+             <StatusFilter selectedStatus={selectedStatus} setSelectedStatus={setSelectedStatus} />
             </div>
     )
 }
