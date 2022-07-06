@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Serif+Display:wght@200;400;700&display=swap" />
     <link rel="stylesheet" href="{{ mix('/css/style.css') }}" />
     <title>MI6 HQ</title>
+    <meta name="csrf-token" content={{csrf_token()}} />
 </head>
 
 <body>

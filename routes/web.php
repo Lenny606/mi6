@@ -25,3 +25,6 @@ Route::get('/', ['App\Http\Controllers\HomeController', 'index']);
 Route::get('/people-of-interest', [App\Http\Controllers\PersonController::class, 'index']);
 Route::post('/people-of-interest/edit', ['App\Http\Controllers\PersonController', 'edit']);
 
+//react routing combination where path === anything 
+Route::get('/missions/{path?}', [App\Http\Controllers\MissionsController::class, 'app'])->where('path','.*');
+
