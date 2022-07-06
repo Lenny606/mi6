@@ -13,15 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/components', function(){
     return view('nav');
     });
 
 Route::get('/', ['App\Http\Controllers\HomeController', 'index']);
-Route::get('/people-of-interest', ['App\Http\Controllers\PersonController', 'index'])
-    ->name('people-index');
+Route::get('/people-of-interest', [App\Http\Controllers\PersonController::class, 'index']);
 Route::post('/people-of-interest/edit', ['App\Http\Controllers\PersonController', 'edit']);
 

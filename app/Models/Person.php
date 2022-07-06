@@ -12,6 +12,7 @@ use App\Models\Mission;
 class Person extends Model
 {
     use HasFactory;
+    
     public function aliases()
     {
         return $this->hasMany(Alias::class);

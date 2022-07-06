@@ -17,4 +17,14 @@
     @yield ('content')
 </body>
 
+{{-- here goes logic for navigation button - hide and show --}}
+<script >
+          const button = document.querySelector('.nav-control button')
+        const navPanel = document.querySelector('.left-panel')
+        button.addEventListener('click', () => {
+            navPanel.classList.toggle('hidden')
+            button.textContent = button.textContent == '>' ? '<' : '>'
+        })
+</script>
+
 </html>

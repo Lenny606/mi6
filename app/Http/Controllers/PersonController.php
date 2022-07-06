@@ -9,7 +9,7 @@ class PersonController extends Controller
 {
     public function index()
     {
-        $people = Person::get();
+        $people = Person::where('id')->get();
 
         return view('people-of-interest.index', compact('people'));
     }
@@ -19,7 +19,7 @@ class PersonController extends Controller
         $person = Person::findOrFail($request->input('id'));
         $person->name = $request->input('name');
         $person->save();
-
+        
         return (
             redirect(route('people-index'))
         );

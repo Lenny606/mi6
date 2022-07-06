@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
 use App\Models\Person;
 use App\Models\Mission;
 
@@ -21,6 +20,7 @@ class PersonController extends Controller
                 ->get();
         } else {
             $people = Person::with('aliases')->with('missions')->get();
+            
         }
 
         return $people;

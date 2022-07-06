@@ -3,7 +3,7 @@ import StatusFilter from "./StatusFilter";
 import PeopleList from "./PeopleList";
 
 const App = () => {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(null);
     const [selectedStatus, setSelectedStatus] = useState("");
 
     const fetchData = async () => {
@@ -17,10 +17,10 @@ const App = () => {
         fetchData()
     }, [])
     
-    const input = document.querySelector('.search-input');
-    input.addEventListener('onkeyup', (e)=>{
-        console.log(e.target.value);
-    });
+    // const input = document.querySelector('.search-input');
+    // input.addEventListener('onkeyup', (e)=>{
+    //     console.log(e.target.value);
+    // });
    
    
     return (

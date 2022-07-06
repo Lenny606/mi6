@@ -27,7 +27,28 @@ body {
     padding-bottom: 200%;
     margin-bottom: -200%;
 }
+//styles for hiding left panel
+.left-panel.hidden {
+    width: 0;
+}
 
+.nav-control {
+    position: absolute;
+    top: 2rem;
+    left: 380px;
+   
+}
+
+.nav-control button {
+    background-color: #2B5554;
+    color: white;
+ 
+
+}
+
+.left-panel.hidden .nav-control {
+    left: 0;
+}
 .main-panel {
     background-color: #2B5554;
     width: 80%;

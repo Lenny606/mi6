@@ -3,6 +3,10 @@
     <nav>
         <a class="button" href="/">Home</a>
         <a class="button" href="/people-of-interest">People of Interest</a>
-        <input class="search-input" type="text" name="name" placeholder="name">
+        <input class="search-input" type="text" name="name" placeholder="name" />
+        <div class="nav-control">
+            <button><</button>
+        </div>
+        
     </nav>
 </div>
